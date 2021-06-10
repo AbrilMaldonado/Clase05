@@ -1,20 +1,22 @@
 const user = "admin";
-const pass = "1234";
+let pass = 1234;
 let saldo = 3000;
+let contrasenia; 
+let menu;
 
 let usuario = prompt("Ingrese su nombre de usuario");
 
-if (usuario !== "admin") {
+if (usuario !== user) {
     alert("El usuario ingresado no es valido, vuelva a intentarlo");
 } else {
-    let contraseña = parseInt(prompt("Ingrese su contraseña"));
-} if (contraseña !== "1234") {
+    contrasenia = parseInt(prompt("Ingrese su contraseña"));
+} if (contrasenia !== pass) {
     alert("La contraseña es incorrecta, vuelva a intentarlo");
 } else {
-    let menu = parseInt(prompt("¿Que operacion desea realizar? \n 1-Ver saldo actual. \n 2-Retirar dinero. \n 3-Depositar dinero en su cuenta. \n 4-Cambiar su clave."));
+    menu = parseInt(prompt("¿Que operacion desea realizar? \n 1-Ver saldo actual. \n 2-Retirar dinero. \n 3-Depositar dinero en su cuenta. \n 4-Cambiar su clave."));
 }
 
-switch (opciones) {
+switch (menu) {
     case 1:
         alert("Su saldo actual es $" + saldo);
         break;
@@ -33,6 +35,7 @@ switch (opciones) {
     case 4:
         let passnew = prompt("Ingrese su nueva clave");
         alert("Su clave ha sido modificada con éxito, su clave actual es " + passnew);
+        pass = passnew;
         break;
     default:
         alert("La opcion ingresada no es valida");            
